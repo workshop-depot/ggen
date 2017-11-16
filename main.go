@@ -10,10 +10,7 @@ import (
 )
 
 func main() {
-	if err := iniconfig.New().Load(&conf); err != nil {
-		// this error does not help much, unless we explicitly need it
-		// in which case it should be handled properly
-	}
+	iniconfig.New().Load(&conf)
 
 	app := cli.NewApp()
 	setAppInfo(app)

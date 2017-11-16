@@ -27,7 +27,7 @@ func extractBlankImports(fpath string) ([]string, error) {
 	fset := token.NewFileSet()
 	fast, err := parser.ParseFile(fset, fpath, nil, parser.ImportsOnly)
 	if err != nil {
-		return nil, err //ors.WithStack(err)
+		return nil, err
 	}
 	var blankImports []string
 	for _, vi := range fast.Imports {
